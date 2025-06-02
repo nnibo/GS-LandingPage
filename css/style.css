@@ -25,6 +25,15 @@ body {
     font-size: 1.6rem;
 }
 
+h1 {
+    font-family: var(--font-title);
+    font-size: var(--title-size);
+}
+
+p {
+    font-family: var(--font-text);
+}
+
 ul, ol {
     list-style: none;
 }
@@ -35,10 +44,10 @@ a {
     font-weight: 600;
     transition: color .7s;
     font-family: var(--font-text);
-}
 
-a:hover{
-    color: var(--main-color)
+    &:hover{
+        color: var(--main-color);
+    }
 }
 
 .container {
@@ -63,8 +72,6 @@ a:hover{
     padding: 2rem 4rem; 
 
     & h1{
-        font-size: var(--title-size);
-        font-family: var(--font-title);
         color: var(--main-color);
     }
    
@@ -118,8 +125,6 @@ a:hover{
     width: 45%;
 
     & h1{
-        font-size: var(--title-size);
-        font-family: var(--font-title);
         color: var(--neutral-black);
 
         & span{
@@ -128,7 +133,6 @@ a:hover{
     }
 
     & p{
-        font-family: var(--font-text);
         color: var(--neutral-black);
         text-wrap: balance;
         margin-top: 20px;

@@ -4,9 +4,9 @@ let texts = [];
 let timer = 3000;
 
 // IMAGE LIST
-images[0] = '../imagens/imagem-objetivo1.png';
-images[1] = '../imagens/imagem-objetivo2.png';
-images[2] = '../imagens/imagem-objetivo3.png';
+images[0] = '../imagens/defesa-civil-populacao.jpg';
+images[1] = '../imagens/defesa-civil-enchente.jpg';
+images[2] = '../imagens/policiais-enchente.jpg';
 
 // TEXT LIST
 texts[0] = 'Evitar perdas humanas e materiais durante enchentes, por meio de monitoramento em tempo real e alertas visuais.';

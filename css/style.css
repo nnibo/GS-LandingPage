@@ -46,7 +46,7 @@ a {
     font-family: var(--font-text);
 
     &:hover{
-        color: var(--main-color);
+        color: var(--secondary-color);
     }
 }
 
@@ -71,8 +71,9 @@ a {
     justify-content: space-between;
     padding: 2rem 4rem; 
 
-    & h1{
-        color: var(--main-color);
+    & img {
+        width: 35rem;
+        height: 15rem;
     }
    
 }
@@ -108,9 +109,10 @@ a {
 }
 
 .center {
-    display: flex; /* Adicione isso */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
 }
 
 .conteudo-tecnologias {
@@ -159,4 +161,37 @@ a {
     gap: 1rem;
 }
 
+.bg-blue{
+    background-image: url(../imagens/fundo-objetivos.png);
+}
+
+.objetivos-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    
+    & h1 {
+        color: var(--neutral-white);
+        font-family: var(--font-title);
+        font-size: var(--title-size);
+    }
+    
+    & img {
+        width: 60%;
+        height: 70rem;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    & p {
+        color: var(--neutral-white);
+        font-family: var(--font-text);
+        max-width: 60rem;
+        text-wrap: balance;
+        line-height: 1.6;
+    }
+}
 

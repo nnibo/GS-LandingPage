@@ -25,3 +25,13 @@ const changeImg = () => {
     setTimeout(changeImg, timer);
 }
 window.onload = changeImg;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuList = document.querySelector('.header-menu ul');
+    
+    menuToggle.addEventListener('click', function() {
+        menuList.classList.toggle('active');
+    });
+    
+});

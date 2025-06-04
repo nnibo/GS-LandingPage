@@ -439,3 +439,58 @@ hr{
         }
     }
 }
+
+
+/* CSS DE WEB DEVELOPMENT */
+.icone-hamburguer {
+    background-color: var(--neutral-gray);
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    border-radius: 50%;
+    transition: background-color .3s;
+    display: none; /* Esconde por padrão */
+}
+.icone-hamburguer:hover {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 1048px) {
+    .header-page {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        position: relative;
+    }
+    .icone-hamburguer {
+        display: block;
+        margin: 0;
+    }
+    .header-menu {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .header-menu ul {
+        display: none; 
+        flex-direction: column;
+        width: max-content;
+        min-width: 180px;
+        background: var(--neutral-gray, #252525);
+        gap: 2rem;
+        padding: 2rem 2.5rem;
+        margin: 0;
+        align-items: flex-start;
+        text-align: left;
+        border-radius: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: auto;
+    }
+    .header-menu ul.active {
+        display: flex;
+    }
+}

@@ -2,8 +2,8 @@
     --font-title: 'Poppins', sans-serif;
     --font-text: 'Montserrat', sans-serif;
     --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
-    --main-color: #064342;
-    --secondary-color: #2FAD95;
+    --main-color: #2FAD95;
+    --secondary-color: #064342;
     --tertiary-color: #A5E6D8;
     --neutral-white: #F2F2F2;
     --neutral-black: #000;
@@ -51,7 +51,7 @@ a {
     font-family: var(--font-text);
 
     &:hover{
-        color: var(--secondary-color);
+        color: var(--main-color);
     }
 }
 
@@ -101,7 +101,7 @@ a {
         font-family: var(--font-title);
         color: var(--neutral-white);
         & span{
-            color: var(--secondary-color);
+            color: var(--main-color);
         }
     }
     & p{
@@ -134,7 +134,7 @@ a {
         color: var(--neutral-black);
 
         & span{
-            color: var(--secondary-color);
+            color: var(--main-color);
         }
     }
 
@@ -206,7 +206,7 @@ a {
     margin-top: 5rem;
     gap: 2rem;
     & span {
-        color: var(--secondary-color);
+        color: var(--main-color);
     }
 }
 
@@ -245,7 +245,7 @@ hr{
     margin: 2rem auto;
     border: none;
     height: 1px;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
 }
 
 .beneficios {
@@ -271,7 +271,7 @@ hr{
     gap: 1rem;
 
     & span {
-        color: var(--secondary-color);
+        color: var(--main-color);
     }
 
     & p {
@@ -281,7 +281,7 @@ hr{
 
 .bg-dia-a-dia{
     background-image: var(--bg-gradient),url(../imagens/fundo-dia-a-dia.jpg);
-    height: 50vh;
+    height: 70vh;
 }
 
 .textos-dia-a-dia{
@@ -291,9 +291,14 @@ hr{
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 4rem;
     & h1 {
         color: var(--neutral-white);
+
+    }
+    
+    & span {
+        color: var(--main-color);
     }
 
     & p {
@@ -301,4 +306,91 @@ hr{
         text-wrap: balance;
         width: 30%;
     }
+
+    & h3{
+        text-wrap: balance;
+        width: 30%;
+        color: var(--neutral-white);
+    }
+
+    & button {
+        width: 20rem;
+        height: 5rem;
+        background-color: var(--main-color);
+        color: var(--neutral-white);
+        border: none;
+        border-radius: 8px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
+    }
 }
+
+.container-form{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    & h1 {
+        color: var(--neutral-white);
+    }
+
+    & p{
+        color: var(--neutral-white);
+    }
+
+    & textarea{
+        width: 30%;
+        height: 10rem;
+        border-radius: 8px;
+        border: none;
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-family: var(--font-text);
+        resize: none;
+    }
+
+    & button {
+        width: 20rem;
+        height: 5rem;
+        background-color: var(--main-color);
+        color: var(--neutral-white);
+        border: none;
+        border-radius: 8px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: var(--tertiary-color);
+        }
+    }
+}
+
+.inputs-form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & input {
+        width: 100%;
+        height: 4rem;
+        border-radius: 8px;
+        border: none;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+        font-family: var(--font-text);
+    }
+}
+

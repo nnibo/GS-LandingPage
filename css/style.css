@@ -165,7 +165,7 @@ a {
     gap: 1rem;
 }
 
-.bg-blue{
+.bg-objetivos{
     background-image: url(../imagens/fundo-objetivos.png);
 }
 
@@ -185,8 +185,8 @@ a {
     }
     
     & img {
-        width: 60%;
-        height: 70rem;
+        width: 50%;
+        height: 60rem;
         object-fit: cover;
         border-radius: 8px;
     }
@@ -276,5 +276,29 @@ hr{
 
     & p {
         text-wrap: balance;
+    }
+}
+
+.bg-dia-a-dia{
+    background-image: var(--bg-gradient),url(../imagens/fundo-dia-a-dia.jpg);
+    height: 50vh;
+}
+
+.textos-dia-a-dia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    & h1 {
+        color: var(--neutral-white);
+    }
+
+    & p {
+        color: var(--neutral-white);
+        text-wrap: balance;
+        width: 30%;
     }
 }

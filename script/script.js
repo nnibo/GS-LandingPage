@@ -64,3 +64,48 @@ quizForm.onsubmit = function(e) {
 }
 
 
+const modoEscuro = document.getElementById('modo-escuro');
+modoEscuro.onclick = function() {
+    document.body.style.backgroundColor = 'black';
+
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = 'white';
+    });
+
+    document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'white';
+    });
+
+    document.querySelectorAll('h3').forEach(h3 => {
+        h3.style.color = 'white';
+    });   
+}
+
+const modoClaro = document.getElementById('modo-claro');
+modoClaro.onclick = function() {
+    document.body.style.backgroundColor = 'white';
+
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = 'black';
+    });
+
+    document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'black';
+    });
+
+    document.querySelectorAll('h3').forEach(h3 => {
+        h3.style.color = 'black';
+    });
+
+    document.querySelectorAll('.p-white').forEach(p => {
+        p.style.color = 'white';
+    });
+
+    document.querySelectorAll('.h1-white').forEach(h1 => {
+        h1.style.color = 'white';
+    });
+
+    document.querySelectorAll('.h3-white').forEach(h3 => {
+        h3.style.color = 'white';
+    });
+}

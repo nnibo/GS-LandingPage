@@ -62,11 +62,6 @@ a {
 
 .icone-cor-fundo {
     cursor: pointer;
-    font-size: 2.4rem;
-    transition: color 0.2s;
-}
-.icone-cor-fundo:hover {
-    color: var(--main-color, #007bff);
 }
 
 .container {

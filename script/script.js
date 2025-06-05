@@ -25,3 +25,120 @@ const changeImg = () => {
     setTimeout(changeImg, timer);
 }
 window.onload = changeImg;
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuList = document.querySelector('.header-menu ul');
+
+    menuToggle.addEventListener('click', function () {
+        menuList.classList.toggle('active');
+    });
+
+});
+
+const quizForm = document.getElementById('quiz-form');
+const resultadoDiv = document.getElementById('resultado');
+
+
+quizForm.onsubmit = function (e) {
+    e.preventDefault();
+
+    for (let i = 1; i <= 10; i++) {
+        const respostaSelecionada = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!respostaSelecionada) {
+            resultadoDiv.innerHTML = `<p style="color: red; font-size: 20px;">Por favor, responda todas as perguntas antes de enviar.</p>`;
+            setTimeout(() => {
+                resultadoDiv.innerHTML = '';
+            }, 3000);
+            return;
+        }
+    }
+
+    let acertos = 0;
+    for (let i = 1; i <= 10; i++) {
+        const correta = document.getElementById(`correta${i}`);
+        if (correta && correta.checked) acertos++;
+    }
+    resultadoDiv.innerHTML = `<p style="font-size: 20px; color: white;">Você acertou ${acertos} de 10 questões.</p>`;
+    setTimeout(() => {
+        resultadoDiv.innerHTML = '';
+    }, 3000);
+}
+
+
+const enviarContato = document.getElementById('form-contato');
+enviarContato.onsubmit = function (e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const msgContato = document.getElementById('msg-contato');
+    msgContato.innerHTML = `<p style="color: black;">Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.</p>`;
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensagem').value = '';
+    setTimeout(() => {
+        msgContato.innerHTML = '';
+    }, 3000);
+}
+
+const modoEscuro = document.getElementById('modo-escuro');
+modoEscuro.onclick = function () {
+    document.body.style.backgroundColor = 'black';
+
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = 'white';
+    });
+
+    document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'white';
+    });
+
+    document.querySelectorAll('h3').forEach(h3 => {
+        h3.style.color = 'white';
+    });
+}
+
+const modoClaro = document.getElementById('modo-claro');
+modoClaro.onclick = function () {
+    document.body.style.backgroundColor = 'white';
+
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = 'black';
+    });
+
+    document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'black';
+    });
+
+    document.querySelectorAll('h3').forEach(h3 => {
+        h3.style.color = 'black';
+    });
+
+    document.querySelectorAll('.p-white').forEach(p => {
+        p.style.color = 'white';
+    });
+
+    document.querySelectorAll('.h1-white').forEach(h1 => {
+        h1.style.color = 'white';
+    });
+
+    document.querySelectorAll('.h3-white').forEach(h3 => {
+        h3.style.color = 'white';
+    });
+}
+
+const modoAzul = document.getElementById('modo-azul');
+modoAzul.onclick = function () {
+    document.body.style.backgroundColor = '#064342';
+
+    document.querySelectorAll('p').forEach(p => {
+        p.style.color = 'white';
+    });
+
+    document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'white';
+    });
+
+    document.querySelectorAll('h3').forEach(h3 => {
+        h3.style.color = 'white';
+    });
+}

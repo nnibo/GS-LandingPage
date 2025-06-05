@@ -40,6 +40,10 @@ p {
     font-family: var(--font-text);
 }
 
+span {
+    color: var(--main-color);
+}
+
 ul, ol {
     list-style: none;
 }
@@ -101,9 +105,6 @@ a {
         font-size: clamp(2.4rem, 4vw, 6rem);
         font-family: var(--font-title);
         color: var(--neutral-white);
-        & span{
-            color: var(--main-color);
-        }
     }
     & p{
         width: 60%;
@@ -133,10 +134,6 @@ a {
 
     & h1{
         color: var(--neutral-black);
-
-        & span{
-            color: var(--main-color);
-        }
     }
 
     & p{
@@ -206,9 +203,6 @@ a {
     align-items: center;
     margin-top: 5rem;
     gap: 2rem;
-    & span {
-        color: var(--main-color);
-    }
 }
 
 .card-flex{
@@ -271,10 +265,6 @@ hr{
     flex-direction: column;
     gap: 1rem;
 
-    & span {
-        color: var(--main-color);
-    }
-
     & p {
         text-wrap: balance;
     }
@@ -296,10 +286,6 @@ hr{
     & h1 {
         color: var(--neutral-white);
 
-    }
-    
-    & span {
-        color: var(--main-color);
     }
 
     & p {
@@ -342,18 +328,18 @@ hr{
     gap: 2rem;
 
     & h1 {
-        color: var(--neutral-white);
+        color: var(--neutral-black);
     }
 
     & p{
-        color: var(--neutral-white);
+        color: var(--neutral-black);
     }
 
     & textarea{
         width: 30%;
         height: 10rem;
         border-radius: 8px;
-        border: none;
+        border: 1px solid var(--neutral-gray);
         padding: 1rem;
         font-size: 1.6rem;
         font-family: var(--font-text);
@@ -388,7 +374,7 @@ hr{
         width: 100%;
         height: 4rem;
         border-radius: 8px;
-        border: none;
+        border: 1px solid var(--neutral-gray);
         padding: 0 1rem;
         font-size: 1.6rem;
         font-family: var(--font-text);
@@ -449,7 +435,7 @@ hr{
     color: white;
     border-radius: 50%;
     transition: background-color .3s;
-    display: none; /* Esconde por padrão */
+    display: none;
 }
 .icone-hamburguer:hover {
     background-color: var(--main-color);
@@ -493,4 +479,61 @@ hr{
     .header-menu ul.active {
         display: flex;
     }
+}
+
+.quiz-container{
+    height: 170vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    & h1{
+        color: var(--neutral-white);
+    }
+
+    & button {
+        width: 20rem;
+        height: 5rem;
+        background-color: var(--main-color);
+        color: var(--neutral-white);
+        border: none;
+        border-radius: 8px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
+    } 
+}
+
+.questoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+    padding: 2rem;
+    background-color: var(--neutral-gray);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--neutral-white);
+    font-family: var(--font-text);
+    font-size: 1.6rem;
+
+}
+
+.questao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.respostas {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }

@@ -65,7 +65,7 @@
     </section>
 
     <section class="container objetivos-slide bg-objetivos" id="objetivos">
-        <h1>Objetivos para alcançar</h1>
+        <h1><span>Objetivos</span> para alcançar</h1>
         <img name="slide" alt="Imagens Slideshow">
         <p id="slide-text"></p>
     </section>
@@ -125,8 +125,107 @@
         <h3>Agora que conheceu um pouco mais sobre nosso projeto, o que acha de fazer um <span>QUIZ?</span></h3>
         <button>Clique para fazer</button>
     </section>
-    
-    <form class="container-form bg-objetivos">
+
+    <section class="container quiz-container bg-objetivos" id="quiz">
+        <h1>BEM VINDO AO NOSSO <span>QUIZ</span></h1>
+        <form class="questoes" id="quiz-form">
+            <div class="questao">
+                <h2>1. O que é uma enchente?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q1"> a- Um deslizamento de terra</label>
+                    <label><input type="radio" name="q1" id="correta1"> b- Um alagamento causado por excesso de água</label>
+                    <label><input type="radio" name="q1"> c- Uma tempestade de areia</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>2. Qual a principal causa das enchentes em áreas urbanas?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q2"> a- Falta de árvores nas calçadas</label>
+                    <label><input type="radio" name="q2" id="correta2"> b- Falta de drenagem adequada e impermeabilização do solo</label>
+                    <label><input type="radio" name="q2"> c- Presença de rios</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>3. Qual o papel das matas ciliares?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q3" id="correta3"> a- Ajudam a absorver e retardar o escoamento da água da chuva</label>
+                    <label><input type="radio" name="q3"> b- Bloqueiam o vento</label>
+                    <label><input type="radio" name="q3"> c- Impedem construções</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>4. O que deve ser evitado para diminuir enchentes?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q4"> a- Coleta seletiva</label>
+                    <label><input type="radio" name="q4"> b- Captação de chuva</label>
+                    <label><input type="radio" name="q4" id="correta4"> c- Jogar lixo nas ruas e bueiros</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>5. Sinal de risco iminente de enchente?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q5"> a- Vento forte</label>
+                    <label><input type="radio" name="q5"> b- Calor intenso</label>
+                    <label><input type="radio" name="q5" id="correta5"> c- Subida rápida do nível da água</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>6. O que fazer durante uma enchente?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q6"> a- Ficar no porão</label>
+                    <label><input type="radio" name="q6"> b- Andar na água</label>
+                    <label><input type="radio" name="q6" id="correta6"> c- Buscar abrigo em locais altos</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>7. Quem emite alertas de enchentes?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q7"> a- SAMU</label>
+                    <label><input type="radio" name="q7" id="correta7"> b- Defesa Civil</label>
+                    <label><input type="radio" name="q7"> c- Polícia</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>8. Como a tecnologia ajuda em enchentes?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q8"> a- Evita chuvas</label>
+                    <label><input type="radio" name="q8"> b- Substitui esgoto</label>
+                    <label><input type="radio" name="q8" id="correta8"> c- Emite alertas e organiza atendimentos</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>9. O que é o sistema de alerta por SMS?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q9"> a- Emergência médica</label>
+                    <label><input type="radio" name="q9" id="correta9"> b- Alerta de desastres por SMS</label>
+                    <label><input type="radio" name="q9"> c- App de clima</label>
+                </div>  
+            </div>
+
+            <div class="questao">
+                <h2>10. Boa atitude para preparação da comunidade?</h2>
+                <div class="respostas">
+                    <label><input type="radio" name="q10"> a- Deixar luz acesa</label>
+                    <label><input type="radio" name="q10"> b- Evitar celular</label>
+                    <label><input type="radio" name="q10" id="correta10"> c- Participar de planos de evacuação</label>
+                </div>  
+            </div>
+
+            <button type="submit" id="enviar-quiz">Enviar</button>
+        </form>
+
+        <div id="resultado"></div>
+    </section>
+
+    <form class="container-form" id="form-contato">
         <h1>CONTATO</h1>
         <p>Quer saber mais sobre o projeto? Deixe seu contato e entraremos em contato!</p>
 
@@ -134,8 +233,9 @@
             <input type="text" id="nome" placeholder="Digite seu nome" required>
             <input type="email" id="email" placeholder="Digite seu e-mail" required>
         </div>
-        <textarea placeholder="Digite sua duvida"></textarea>
-        <button>Enviar</button>
+        <textarea placeholder="Digite sua duvida" id="mensagem"></textarea>
+        <button id="botao-enviar-contato">Enviar</button>
+        <div id="msg-contato"></div>
     </form>
 
     <footer class="container-footer">

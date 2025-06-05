@@ -35,3 +35,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+
+const enviarContato = document.getElementById('form-contato');
+enviarContato.onsubmit = function (e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const msgContato = document.getElementById('msg-contato');
+    msgContato.innerHTML = `<p style="color: black;">Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.</p>`;
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensagem').value = '';
+    setTimeout(() => {
+        msgContato.innerHTML = '';
+    }, 3000);
+}
+
+const quizForm = document.getElementById('quiz-form');
+quizForm.onsubmit = function(e) {
+    e.preventDefault();
+
+    let acertos = 0;
+    for (let i = 1; i <= 10; i++) {
+        const correta = document.getElementById(`correta${i}`);
+        if (correta && correta.checked) acertos++;
+    } 
+    const resultadoDiv = document.getElementById('resultado');
+    resultadoDiv.innerHTML = `<p style="font-size: 20px; color: white;">Você acertou ${acertos} de 10 questões.</p>`;
+}
+

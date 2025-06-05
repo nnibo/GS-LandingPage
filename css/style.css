@@ -304,9 +304,12 @@ hr{
         color: var(--neutral-white);
     }
 
-    & button {
+    & a {
         width: 20rem;
         height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: var(--main-color);
         color: var(--neutral-white);
         border: none;

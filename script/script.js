@@ -51,6 +51,7 @@ enviarContato.onsubmit = function (e) {
 }
 
 const quizForm = document.getElementById('quiz-form');
+const resultadoDiv = document.getElementById('resultado');
 quizForm.onsubmit = function(e) {
     e.preventDefault();
 
@@ -59,7 +60,7 @@ quizForm.onsubmit = function(e) {
         const correta = document.getElementById(`correta${i}`);
         if (correta && correta.checked) acertos++;
     } 
-    const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML = `<p style="font-size: 20px; color: white;">Você acertou ${acertos} de 10 questões.</p>`;
 }
+
 
